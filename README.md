@@ -10,6 +10,7 @@ virtualenv .
 source bin/activate
 git clone https://github.com/skyride/reddit-rss-bot.git
 cd reddit-rss-bot
+pip install -r requirements.txt
 cp config.py.example config.py
 ```
 
