@@ -48,6 +48,7 @@ for name, url in config.feeds:
 
             title = "[%s] %s" % (name, entry['title'])
             text = h.handle(entry['content'][0]['value'])
+            text = "%s\n\n%s" % (entry['link'], text)
             text = chunks(text, 40000)
 
             submission = subreddit.submit(
