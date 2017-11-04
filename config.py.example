@@ -1,0 +1,16 @@
+historyfile = "history.json"
+
+reddit = {
+    "client_id": "",
+    "client_secret": "",
+    "user_agent": "EVE News PRAW Bot by /u/caprisunkraftfoods",
+    "username": "",
+    "password": "",
+    "subreddit": "",
+    "send_replies": False
+}
+
+feeds = [
+    ("Dev Blog", "http://newsfeed.eveonline.com/en-US/2/articles/page/1/20"),
+    ("Patch Notes", "http://newsfeed.eveonline.com/en-US/15/articles/page/1/5")
+]
