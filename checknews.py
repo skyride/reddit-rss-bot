@@ -39,9 +39,7 @@ for name, url in config.feeds:
         # Check its not just a blank because it's a first run
         entry = feed['entries'][0]
 
-        if history[name] == "":
-            history[name] = entry['title_unique']
-        else:
+        if history[name] != "":
             # Post the entry to reddit
             h = html2text.HTML2Text()
             h.ignore_images = True
@@ -73,6 +71,8 @@ for name, url in config.feeds:
                 print "Replying with more text to %s" % submission
                 submission = submission.reply(content.pop())
                 time.sleep(10)
+
+        history[name] = entry['title_unique']
 
 
 # Write the history file back to disk
